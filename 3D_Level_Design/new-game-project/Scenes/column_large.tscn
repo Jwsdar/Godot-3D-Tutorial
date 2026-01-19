@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dww1k1hh1je1w"]
+
+[ext_resource type="PackedScene" uid="uid://bc80doohh3wq7" path="res://Models/Walls/column-large.glb" id="1_t44lr"]
+[ext_resource type="Material" uid="uid://cxuc0abxtftig" path="res://Textures/concretetext.tres" id="2_w4lea"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_t44lr"]
+points = PackedVector3Array(0.14499022, 0, 0.19496186, -0.14502838, 0, 0.19496186, 0.19496186, 0, 0.14499022, 0.10975434, 1.1048913, 0.1254826, 0.0052300394, 0.8814575, 0.1413254, -0.19500001, 0, 0.14499022, -0.109830655, 1.1048913, 0.1254826, 0.19496186, 0, -0.14502838, 0.14124905, 0.8813469, 0.0067570508, 0.1254826, 1.1048913, 0.10975434, 0.09940879, 1.13, 0.10047771, -0.19500001, 0, -0.14502838, -0.12552075, 1.1048913, 0.10975434, -0.099446945, 1.13, 0.10047771, -0.10051586, 1.13, 0.09940879, 0.14499022, 0, -0.19500001, 0.1254826, 1.1048913, -0.109830655, 0.10047771, 1.13, 0.09940879, -0.14502838, 0, -0.19500001, -0.12552075, 1.1048913, -0.109830655, -0.10051586, 1.13, -0.099446945, 0.10975434, 1.1048913, -0.12552075, 0.09940879, 1.13, -0.10051586, 0.10047771, 1.13, -0.099446945, -0.109830655, 1.1048913, -0.12552075, -0.099446945, 1.13, -0.10051586)
+
+[node name="column-large2" instance=ExtResource("1_t44lr")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="column-large" parent="." index="0"]
+material_overlay = ExtResource("2_w4lea")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_t44lr")

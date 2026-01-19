@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cxuc0abxtftig"]
+
+[ext_resource type="Texture2D" uid="uid://codm8e0aijjy" path="res://Textures/concrete.jpg" id="1_j2210"]
+
+[resource]
+albedo_texture = ExtResource("1_j2210")
+uv1_scale = Vector3(0.04, 0.099, 0.099)
+uv1_offset = Vector3(0.575, 1.47, 0)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.9999968
+uv1_world_triplanar = true

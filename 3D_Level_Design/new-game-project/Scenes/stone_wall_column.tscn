@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfawdnl1q6421"]
+
+[ext_resource type="PackedScene" uid="uid://dfnvs1sk5giyq" path="res://Models/Walls/stone-wall-column.glb" id="1_mhl3e"]
+[ext_resource type="Material" uid="uid://cxuc0abxtftig" path="res://Textures/concretetext.tres" id="2_jetly"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mhl3e"]
+points = PackedVector3Array(0.17492169, 0.85, -0.2750196, 0.5, 0.6999853, -0.32003722, 0.5, 0.7249462, -0.40003425, 0.17492169, 0.85, -0.5250147, 0.12490213, 0.85, -0.22500002, 0.5, 0.6799335, -0.30002937, 0.5, 0.6999853, -0.4800313, 0.12490213, 0.85, -0.575, 0.12490213, 0, -0.22500002, -0.12509787, 0.85, -0.22500002, 0.5, 0, -0.30002937, 0.5, 0.6799335, -0.5000049, 0.12490213, 0, -0.575, -0.12509787, 0.85, -0.575, -0.12509787, 0, -0.22500002, -0.17501956, 0.85, -0.2750196, -0.5, 0.6999853, -0.32003722, -0.5, 0.6799335, -0.30002937, 0.5, 0, -0.5000049, -0.12509787, 0, -0.575, -0.5, 0.6799335, -0.5000049, -0.5, 0.6999853, -0.4800313, -0.17501956, 0.85, -0.5250147, -0.5, 0, -0.30002937, -0.5, 0.7249462, -0.40003425, -0.5, 0, -0.5000049)
+
+[node name="stone-wall-column2" instance=ExtResource("1_mhl3e")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="stone-wall-column" parent="." index="0"]
+material_overlay = ExtResource("2_jetly")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_mhl3e")
