@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhnddu1mssqg4"]
+
+[ext_resource type="PackedScene" uid="uid://brly0edgp2fuv" path="res://Models/Walls/stone-wall.glb" id="1_vhnn4"]
+[ext_resource type="Material" uid="uid://cxuc0abxtftig" path="res://Textures/concretetext.tres" id="2_7tq2n"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_65ty5"]
+points = PackedVector3Array(0.5, 0.7249291, -0.4000196, 0.5, 0.69994867, -0.32000783, 0.5, 0.69994867, -0.48001176, -0.5, 0.7249291, -0.4000196, -0.5, 0.69994867, -0.32000783, 0.5, 0.67993593, -0.30001956, 0.5, 0.67993593, -0.5, -0.5, 0.69994867, -0.48001176, -0.5, 0.67993593, -0.30001956, 0.5, 0, -0.30001956, 0.5, 0, -0.5, -0.5, 0.67993593, -0.5, -0.5, 0, -0.30001956, -0.5, 0, -0.5)
+
+[node name="stone-wall2" instance=ExtResource("1_vhnn4")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="stone-wall" parent="." index="0"]
+material_overlay = ExtResource("2_7tq2n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_65ty5")
